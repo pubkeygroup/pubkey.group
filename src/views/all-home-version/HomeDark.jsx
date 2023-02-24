@@ -7,10 +7,12 @@ import Portfolio from "../../components/portfolio/Portfolio";
 import Blog from "../../components/blog/Blog";
 import Contact from "../../components/Contact";
 import Social from "../../components/Social";
+import Invoices from "../../components/invoices";
 
 const menuItem = [
   { icon: "fa-home", menuName: "Home" },
-  { icon: "fa-user", menuName: "About" }
+  { icon: "fa-user", menuName: "About" },
+  { icon: "fa-credit-card", menuName: "Pay Invoice" }
 ];
 
 const HomeDark = () => {
@@ -27,7 +29,7 @@ const HomeDark = () => {
             {menuItem.map((item, i) => (
               <Tab className="icon-box" key={i}>
                 <i className={`fa ${item.icon}`}></i>
-                <h2>{item.menuName}</h2>
+                <h2 style={{ whiteSpace: 'nowrap' }}>{item.menuName}</h2>
               </Tab>
             ))}
           </TabList>
@@ -71,9 +73,9 @@ const HomeDark = () => {
               data-aos-duration="1200"
             >
               <h1>
-                my <span>portfolio</span>
+                Pay <span>Invoices</span>
               </h1>
-              <span className="title-bg">works</span>
+              <span className="title-bg">Invoices</span>
             </div>
             {/* End title */}
             <div
@@ -82,7 +84,7 @@ const HomeDark = () => {
               data-aos-duration="1200"
               data-aos-delay="100"
             >
-              <Portfolio />
+              <Invoices />
             </div>
             {/* End grid gallery */}
           </TabPanel>
