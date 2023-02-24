@@ -114,6 +114,18 @@ hr.separator {
   }
 }
 
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 1rem;
+}
+
 /*** Light Body ***/
 
 body.light {
