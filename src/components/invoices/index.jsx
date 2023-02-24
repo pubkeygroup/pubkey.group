@@ -39,9 +39,15 @@ const Invoices = () => {
           </div>
 
           <h3>Card Information</h3>
-          <p>We accept AMEX, Visa, and Mastercard</p>
+          <div className="flex gap-2">
+            <p>We accept</p>
+            <img src="/img/card-visa.svg" alt="VISA" height="25" />
+            <img src="/img/card-mastercard.svg" alt="Mastercard" height="25" />
+            <img src="/img/card-amex.svg" alt="AMEX" height="25" />
+            <img src="/img/card-discover.svg" alt="Discover" height="25" />
+          </div>
 
-          <div className="col-12 col-md-6">
+          <div className="col-12">
             <div className="form-group">
               <input
                 {...register("name", { required: true })}
@@ -51,6 +57,20 @@ const Invoices = () => {
               />
               {errors.name && errors.name.type === "required" && (
                 <span className="invalid-feedback">Name is required</span>
+              )}
+            </div>
+          </div>
+
+          <div className="col-12 col-md-6">
+            <div className="form-group">
+              <input
+                {...register("cardNumber", { required: true })}
+                type="text"
+                name="cardNumber"
+                placeholder="CARD NUMBER"
+              />
+              {errors.cardNumber && errors.cardNumber.type === "required" && (
+                <span className="invalid-feedback">Card Number is required</span>
               )}
             </div>
           </div>
